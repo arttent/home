@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ARTTENT – Georgian Art Management, Pop-Up Galleries &amp; Art Advisory</title>
+    <meta name="description" content="Discover ARTTENT, a Georgian art management company and pop-up gallery concept connecting collectors, buyers and artists through exhibitions, art advisory, art dealing, and curated cultural projects in Georgia and beyond.">
+    <meta name="keywords" content="ARTTENT, Georgian art, art gallery Tbilisi, art advisory, art dealing, art management, art consulting, art exhibitions Georgia, pop-up gallery, art collectors, buy art Georgia, projects, art residency, art curator, art scene">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.arttent.ge/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ARTTENT – Georgian Art Management, Pop-Up Galleries &amp; Art Advisory">
+    <meta property="og:description" content="Discover ARTTENT, a Georgian art management company and pop-up gallery concept connecting collectors, buyers and artists through exhibitions, art advisory, art dealing, and curated cultural projects in Georgia and beyond.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.arttent.ge/">
+    <meta property="og:image" content="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Copy%20of%203.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ARTTENT – Georgian Art Management, Pop-Up Galleries &amp; Art Advisory">
+    <meta name="twitter:description" content="Discover ARTTENT, a Georgian art management company and pop-up gallery concept connecting collectors, buyers and artists through exhibitions, art advisory, art dealing, and curated cultural projects in Georgia and beyond.">
+    <meta name="twitter:image" content="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Copy%20of%203.jpg">
+
+    <link rel="icon" href="/favicon.ico">
+
+    <script type="application/ld+json" nonce="MzU4OTg3MTMwNywxOTY5Mzc1ODc0">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ARTTENT",
+      "url": "https://www.arttent.ge/",
+      "logo": "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/LOGO%20arttent%20galleries.jpg",
+      "sameAs": [
+        "https://www.facebook.com/ArtTentTbilisi/"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts: Bebas Neue for headings, Inter for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Analytics (placeholder) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" nonce="MzU4OTg3MTMwNywxOTY5Mzc1ODc0"></script>
+    <script nonce="MzU4OTg3MTMwNywxOTY5Mzc1ODc0">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <style>
+        :root {
+            --color-bg-main: #F9FAFB;
+            --color-text-main: #1F2933;
+            --color-text-secondary: #6B7280;
+            --color-accent: rgb(234, 165, 6);
+            --color-accent-dark: rgb(214, 145, 0);
+            --color-dark: #111827;
+            --color-card-bg: #F3F4F6;
+            --color-border: #E5E7EB;
+            --color-success: #10B981;
+            --color-error: #EF4444;
+            --max-width: 72rem;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--color-bg-main);
+            color: var(--color-text-main);
+            margin: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            color: var(--color-dark);
+            text-transform: uppercase;
+        }
+
+        h4 {
+            font-family: 'Bebas Neue', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-weight: 600;
+            color: var(--color-dark);
+        }
+
+        a {
+            color: var(--color-dark);
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--color-accent);
+            text-decoration: underline;
+        }
+
+        .page-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-inline: 1rem;
+        }
+
+        @media (min-width: 992px) {
+            .page-container {
+                padding-inline: 3rem;
+            }
+        }
+
+        .section-spacing {
+            padding-block: 4rem;
+        }
+
+        @media (min-width: 992px) {
+            .section-spacing {
+                padding-block: 5rem;
+            }
+        }
+
+        /* Navbar */
+        .navbar-arttent {
+            background-color: transparent;
+            border-bottom: 1px solid transparent;
+            transition: box-shadow 0.2s ease, background-color 0.2s ease, border-bottom-color 0.2s;
+        }
+
+        .navbar-arttent.navbar-solid {
+            background-color: var(--color-bg-main);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .navbar-shadow {
+            box-shadow: 0 0.25rem 0.75rem rgba(15, 23, 42, 0.08);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-family: 'Bebas Neue', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .navbar-wordmark-art {
+            color: #f3f4f6;
+            transition: color 0.2s;
+        }
+        .navbar-wordmark-tent {
+            color: rgb(234, 165, 6);
+            transition: color 0.2s;
+        }
+        .navbar-arttent.navbar-solid .navbar-wordmark-art {
+            color: #1F2933 !important;
+        }
+        .navbar-arttent.navbar-solid .navbar-wordmark-tent {
+            color: rgb(234, 165, 6);
+        }
+        .navbar-brand img {
+            display: none;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #f3f4f6 !important;
+            transition: color 0.2s;
+        }
+        .navbar-arttent.navbar-solid .nav-link {
+            color: #1F2933 !important;
+        }
+
+        .nav-link.active,
+        .nav-link:hover,
+        .nav-link:focus {
+            color: var(--color-accent) !important;
+        }
+        .navbar-arttent.navbar-solid .nav-link.active,
+        .navbar-arttent.navbar-solid .nav-link:hover,
+        .navbar-arttent.navbar-solid .nav-link:focus {
+            color: var(--color-accent) !important;
+        }
+
+        /* Buttons */
+        .btn-primary-arttent {
+            background-color: var(--color-accent);
+            border-color: var(--color-accent);
+            color: #ffffff;
+            font-weight: 500;
+            border-radius: 999px;
+            padding-inline: 1.5rem;
+            padding-block: 0.6rem;
+        }
+
+        .btn-primary-arttent:hover,
+        .btn-primary-arttent:focus {
+            background-color: var(--color-accent-dark);
+            border-color: var(--color-accent-dark);
+            color: #ffffff;
+            box-shadow: 0 0.35rem 0.9rem rgba(214, 145, 0, 0.35);
+        }
+
+        .btn-outline-dark-arttent {
+            border-radius: 999px;
+            padding-inline: 1.4rem;
+            padding-block: 0.55rem;
+            border: 1px solid var(--color-dark);
+            color: var(--color-dark);
+            background-color: transparent;
+            font-weight: 500;
+        }
+
+        .btn-outline-dark-arttent:hover,
+        .btn-outline-dark-arttent:focus {
+            background-color: var(--color-card-bg);
+            color: var(--color-dark);
+        }
+
+        .btn-link-arttent {
+            font-weight: 500;
+            color: var(--color-dark);
+        }
+
+        .btn-link-arttent:hover,
+        .btn-link-arttent:focus {
+            color: var(--color-accent);
+            text-decoration: underline;
+        }
+
+        /* Hero */
+        #hero {
+            min-height: 100vh;
+            min-height: 100svh;
+            width: 100vw;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .hero-bg-image {
+            position: absolute;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            height: 100svh;
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .hero-bg-overlay {
+            position: absolute;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            height: 100svh;
+            z-index: 2;
+            pointer-events: none;
+            user-select: none;
+            background: linear-gradient(135deg, #000000b3, #0006, #eaa50633);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding-inline: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+            min-height: 100svh;
+            color: #fff;
+            text-shadow: 0 2px 16px rgba(0,0,0,0.18), 0 1px 2px rgba(0,0,0,0.12);
+        }
+
+        @media (min-width: 992px) {
+            .hero-content {
+                padding-inline: 3rem;
+            }
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .hero-inner {
+                grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            }
+        }
+
+        .hero-main {
+            max-width: 32rem;
+        }
+
+        .hero-main-centered {
+            margin-inline: auto;
+            text-align: center;
+        }
+
+        @media (min-width: 992px) {
+            .hero-main {
+                text-align: left;
+            }
+            .hero-main-centered {
+                text-align: left;
+                margin-inline: 0;
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.2rem 0.75rem;
+            border-radius: 999px;
+            background-color: rgba(17, 24, 39, 0.65);
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #fef3c7;
+        }
+
+        .hero-badge-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 999px;
+            background-color: var(--color-accent);
+        }
+
+        .hero-heading {
+            font-size: 2.5rem;
+            line-height: 1.05;
+            margin-top: 0.9rem;
+            margin-bottom: 0.85rem;
+            color: #fff;
+            letter-spacing: 0.04em;
+            font-family: 'Bebas Neue', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        @media (min-width: 768px) {
+            .hero-heading {
+                font-size: 3.25rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .hero-heading {
+                font-size: 3.7rem;
+            }
+        }
+
+        .hero-subtitle {
+            color: #f3f4f6;
+            font-size: 1rem;
+            max-width: 34rem;
+        }
+
+        .hero-meta {
+            margin-top: 1.25rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #e5e7eb;
+        }
+
+        .hero-meta-pill {
+            padding: 0.2rem 0.7rem;
+            border-radius: 999px;
+            border: 1px solid rgba(249, 250, 251, 0.25);
+            background-color: rgba(15, 23, 42, 0.5);
+        }
+
+        .hero-actions {
+            margin-top: 1.75rem;
+        }
+
+        .hero-secondary {
+            font-size: 0.9rem;
+            color: #e5e7eb;
+            margin-top: 0.75rem;
+        }
+
+        .hero-side-card {
+            backdrop-filter: blur(14px);
+            background-color: rgba(17, 24, 39, 0.78);
+            border-radius: 1.25rem;
+            border: 1px solid rgba(249, 250, 251, 0.08);
+            padding: 1.5rem 1.4rem;
+            max-width: 24rem;
+            margin-inline: auto;
+            box-shadow: 0 1.5rem 3.5rem rgba(15, 23, 42, 0.55);
+        }
+
+        .hero-side-heading {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: #e5e7eb;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-side-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1.1rem;
+        }
+
+        .hero-side-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #e5e7eb;
+            margin-bottom: 0.55rem;
+        }
+
+        .hero-side-check {
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 999px;
+            background-color: rgba(34, 197, 94, 0.12);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #6ee7b7;
+            font-size: 0.75rem;
+        }
+
+        .hero-side-meta {
+            font-size: 0.78rem;
+            color: #9ca3af;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #ffe9b3;
+            font-weight: 600;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+        }
+
+        .hero-image {
+            border-radius: 1rem;
+            box-shadow: 0 1.5rem 3rem rgba(15, 23, 42, 0.25);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Cards & Sections */
+        .section-header {
+            text-align: center;
+            max-width: 40rem;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .section-header h2 {
+            font-family: 'Bebas Neue', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .section-header p {
+            color: var(--color-text-secondary);
+            margin-top: 0.75rem;
+            margin-bottom: 0;
+        }
+
+        .card-arttent {
+            background-color: #ffffff;
+            border: 1px solid var(--color-border);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            height: 100%;
+        }
+
+        .card-arttent-highlight {
+            border-color: rgba(234, 179, 8, 0.7);
+            box-shadow: 0 1.25rem 2.5rem rgba(15, 23, 42, 0.08);
+        }
+
+        .card-arttent-muted {
+            background-color: var(--color-card-bg);
+        }
+
+        .card-icon-circle {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color-bg-main);
+            color: var(--color-accent-dark);
+            margin-bottom: 1rem;
+            font-size: 1.35rem;
+        }
+
+        .card-title-arttent {
+            font-size: 1.25rem;
+            font-family: 'Bebas Neue', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text-arttent {
+            font-size: 0.97rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 0;
+        }
+
+        .audience-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.2rem 0.6rem;
+            border-radius: 999px;
+            border: 1px solid var(--color-border);
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-text-secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .artist-avatar {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-inline: auto;
+            margin-bottom: 0.75rem;
+            background: radial-gradient(circle at 30% 20%, #e5e7eb, #d1d5db);
+        }
+
+        /* How It Works */
+        .step-number {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 999px;
+            background-color: #ffffff;
+            border: 1px solid var(--color-border);
+            color: var(--color-accent-dark);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            row-gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.9rem;
+            background-color: #111827;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.35s ease;
+        }
+
+        .gallery-item:hover .gallery-image,
+        .gallery-item:focus-within .gallery-image {
+            transform: scale(1.03);
+        }
+
+        .gallery-item::before {
+            content: "";
+            display: block;
+            padding-top: 70%;
+        }
+
+        .gallery-image-wrapper {
+            position: absolute;
+            inset: 0;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            left: 0.75rem;
+            bottom: 0.75rem;
+            right: 0.75rem;
+            font-size: 0.8rem;
+            color: #f9fafb;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Pricing */
+        .pricing-card {
+            position: relative;
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            background-color: var(--color-accent);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 999px;
+            padding-inline: 0.65rem;
+            padding-block: 0.3rem;
+            letter-spacing: 0.08em;
+        }
+
+        .pricing-label {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .pricing-features {
+            padding-left: 1.1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .pricing-features li {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 0.4rem;
+        }
+
+        /* FAQ */
+        .accordion-button {
+            font-weight: 500;
+            font-size: 0.98rem;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: var(--color-dark);
+            background-color: var(--color-card-bg);
+        }
+
+        .accordion-body {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--color-dark);
+            color: #E5E7EB;
+        }
+
+        .footer a {
+            color: #E5E7EB;
+        }
+
+        .footer a:hover,
+        .footer a:focus {
+            color: var(--color-accent);
+        }
+
+        .footer-logo {
+            display: inline-block;
+            font-family: 'Bebas Neue', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .footer-logo-art {
+            color: #ffffff;
+        }
+
+        .footer-logo-tent {
+            color: rgb(234, 165, 6);
+        }
+
+        .footer-heading {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-social-list {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .footer-social-link {
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 999px;
+            border: 1px solid #4B5563;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #E5E7EB;
+            background-color: transparent;
+            transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .footer-social-link:hover,
+        .footer-social-link:focus {
+            border-color: var(--color-accent);
+            background-color: rgba(245, 158, 11, 0.08);
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-block: 1rem;
+            font-size: 0.85rem;
+            text-align: center;
+            color: #9CA3AF;
+        }
+
+        /* Modal */
+        .modal-header {
+            border-bottom-color: var(--color-border);
+        }
+
+        .modal-title {
+            font-weight: 600;
+        }
+
+        .modal-body p {
+            color: var(--color-text-secondary);
+        }
+
+        .form-label {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-control,
+        .form-control:focus {
+            border-radius: 0.625rem;
+            border-color: var(--color-border);
+            box-shadow: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--color-accent);
+        }
+
+        .alert-inline {
+            font-size: 0.9rem;
+            padding: 0.6rem 0.75rem;
+            border-radius: 0.5rem;
+        }
+
+        .alert-success-inline {
+            background-color: rgba(16, 185, 129, 0.06);
+            color: var(--color-success);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+
+        .alert-error-inline {
+            background-color: rgba(239, 68, 68, 0.06);
+            color: var(--color-error);
+            border: 1px solid rgba(239, 68, 68, 0.35);
+        }
+
+        /* Utility spacing tweaks */
+        .mb-1-5 {
+            margin-bottom: 0.375rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-arttent fixed-top" aria-label="Main navigation">
+        <div class="container-fluid page-container">
+            <a class="navbar-brand" href="#hero" aria-label="ARTTENT home">
+                <span class="navbar-wordmark-art">ART</span><span class="navbar-wordmark-tent">TENT</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="bi bi-list" aria-hidden="true"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarMain">
+                <ul class="navbar-nav mb-3 mb-lg-0 gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#benefits">Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faqs">FAQs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section id="hero">
+        <img
+            src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Copy%20of%203.jpg"
+            class="hero-bg-image"
+            alt="Visitors exploring contemporary art at an ARTTENT exhibition"
+            loading="eager"
+            fetchpriority="high"
+        >
+        <div class="hero-bg-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="hero-inner">
+                <div class="hero-main hero-main-centered">
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        Georgian Art Management &amp; Pop-Up Galleries
+                    </div>
+                    <h1 class="hero-heading">Turn Georgian Art Into a Living Collection</h1>
+                    <p class="hero-subtitle">
+                        Arttent is an international art initiatives and development organization dedicated to advancing the careers of visionary artists and enriching the global cultural landscape. Our mission is to act as the essential bridge, facilitating strategic partnerships, promoting innovative artistic projects, and building robust, reciprocal relationships between galleries, institutions, and the international collector base since 2019.
+                    </p>
+                    <p class="hero-secondary">
+                        Based in Tbilisi &mdash; working across Georgia and beyond.
+                    </p>
+                </div>
+                <aside class="hero-side-card" aria-label="Snapshot of what ARTTENT does">
+                    <p class="hero-side-heading">What we help you do</p>
+                    <ul class="hero-side-list">
+                        <li>
+                            <span class="hero-side-check">
+                                <i class="bi bi-check-lg" aria-hidden="true"></i>
+                            </span>
+                            <span>Curate meaningful collections of Georgian contemporary art.</span>
+                        </li>
+                        <li>
+                            <span class="hero-side-check">
+                                <i class="bi bi-check-lg" aria-hidden="true"></i>
+                            </span>
+                            <span>Transform venues and public spaces into cultural destinations.</span>
+                        </li>
+                        <li>
+                            <span class="hero-side-check">
+                                <i class="bi bi-check-lg" aria-hidden="true"></i>
+                            </span>
+                            <span>Support artists with management, visibility and sustainable careers.</span>
+                        </li>
+                    </ul>
+                    <p class="hero-side-meta mb-0">
+                        From first-time buyers to institutions, ARTTENT guides every step: concept, curation, acquisition and installation.
+                    </p>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artist Roster Section -->
+    <section id="benefits" class="section-spacing bg-white">
+        <div class="page-container">
+            <div class="section-header">
+                <h2>How ARTTENT Works For You</h2>
+                <p>
+                    A focused, app-like approach to art management: clear steps, tailored curation and ongoing support for everyone we work with.
+                </p>
+            </div>
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <article class="card-arttent card-arttent-highlight h-100">
+                        <h3 class="card-title-arttent">Build a Georgian art collection with confidence</h3>
+                        <p class="card-text-arttent">
+                            Discovery calls, studio visits and curated selections help you acquire works that fit your taste, budget and long-term vision&mdash;whether you are just starting or expanding an existing collection.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="card-arttent h-100">
+                        <h3 class="card-title-arttent">Turn your space into a cultural experience</h3>
+                        <p class="card-text-arttent">
+                            We design and deliver art concepts for hotels, offices, malls and public venues&mdash;from temporary pop-ups to permanent collections and site-specific installations.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="card-arttent h-100">
+                        <h3 class="card-title-arttent">Professional management &amp; visibility</h3>
+                        <p class="card-text-arttent">
+                            ARTTENT supports Georgian artists with exhibitions, fair participation, contracts, pricing, communications and strategic career planning so they can focus on their work.
+                        </p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="section-header mt-4">
+                <h2>Selected Artists We Work With</h2>
+                <p>
+                    A glimpse into the artists shaping ARTTENT&rsquo;s program. Full roster and portfolios are available on request.
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Top row: 3 artists -->
+                <div class="col-12 col-md-4 d-flex">
+                    <article class="card-arttent h-100 text-center flex-fill w-100">
+                        <div class="artist-avatar">
+                            <!-- Artist portrait can be placed here in the future -->
+                        </div>
+                        <h3 class="card-title-arttent mb-1">Maka Zedelashvili</h3>
+                    </article>
+                </div>
+                <div class="col-12 col-md-4 d-flex">
+                    <article class="card-arttent h-100 text-center flex-fill w-100">
+                        <div class="artist-avatar">
+                        </div>
+                        <h3 class="card-title-arttent mb-1">Maka Jishkariani</h3>
+                    </article>
+                </div>
+                <div class="col-12 col-md-4 d-flex">
+                    <article class="card-arttent h-100 text-center flex-fill w-100">
+                        <div class="artist-avatar">
+                        </div>
+                        <h3 class="card-title-arttent mb-1">Tamar Gedevanishvili</h3>
+                    </article>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center mt-0">
+                <!-- Second row: 2 artists -->
+                <div class="col-12 col-md-6 d-flex">
+                    <article class="card-arttent h-100 text-center flex-fill w-100">
+                        <div class="artist-avatar">
+                        </div>
+                        <h3 class="card-title-arttent mb-1">Laka Popkhadze</h3>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 d-flex">
+                    <article class="card-arttent h-100 text-center flex-fill w-100">
+                        <div class="artist-avatar">
+                        </div>
+                        <h3 class="card-title-arttent mb-1">Elene Rekhviashvili</h3>
+                    </article>
+                </div>
+            </div>
+            <p class="mt-4 text-center text-muted">
+                Interested in exhibiting or exploring our full roster? <a href="#contactModal" data-bs-toggle="modal" class="btn-link-arttent">Contact us</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section-spacing" style="background-color: #F3F4F6;">
+        <div class="page-container">
+            <div class="section-header">
+                <h2>How ARTTENT Works With Collectors</h2>
+                <p>
+                    A simple, guided process from first conversation to long-term collection strategy.
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <article class="card-arttent card-arttent-muted h-100">
+                        <div class="step-number">1</div>
+                        <h3 class="card-title-arttent">Listen &amp; Understand</h3>
+                        <p class="card-text-arttent">
+                            We start with a consultation to understand your taste, goals, budget and spaces&mdash;whether you collect privately or for hotels, offices or public venues.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="card-arttent card-arttent-muted h-100">
+                        <div class="step-number">2</div>
+                        <h3 class="card-title-arttent">Curate &amp; Propose</h3>
+                        <p class="card-text-arttent">
+                            Our team researches the Georgian art scene, curates tailored selections, and proposes artworks, exhibitions or commissions that fit your vision.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="card-arttent card-arttent-muted h-100">
+                        <div class="step-number">3</div>
+                        <h3 class="card-title-arttent">Acquire &amp; Grow</h3>
+                        <p class="card-text-arttent">
+                            We manage negotiations, due diligence, transport and installation, and support you in growing a coherent collection over time.
+                        </p>
+                    </article>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="mb-2">Ready to explore Georgian art?</p>
+                <button class="btn btn-primary-arttent" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    Start Your Collection
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="testimonials" class="section-spacing bg-white">
+        <div class="page-container">
+            <div class="section-header">
+                <h2>ARTTENT Image Gallery</h2>
+                <p>
+                    Moments from ARTTENT pop-up exhibitions, projects and collaborations in Tbilisi and beyond.
+                </p>
+            </div>
+            <div class="row gallery-grid" id="galleryGrid"></div>
+            <p class="mt-4 text-center text-muted">
+                Looking for specific works or projects? <a href="#contactModal" data-bs-toggle="modal" class="btn-link-arttent">Get in touch with ARTTENT</a>
+            </p>
+        </div>
+    </section>
+
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="section-spacing bg-white">
+        <div class="page-container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>
+                    Answers to common questions from collectors, buyers and artists.
+                </p>
+            </div>
+
+            <div class="accordion" id="faqAccordion">
+                <!-- FAQ 1 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqHeadingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                            What makes ARTTENT different from a traditional gallery?
+                        </button>
+                    </h3>
+                    <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            The story of Arttent is one of continuous evolution and a profound commitment to the advancement of contemporary art in Georgia and beyond. After a period of strategic reflection, Arttent is relaunching with a focused vision: to serve as the essential catalyst and connective tissue for the regional art ecosystem. Founded in July 2019, Arttent initially disrupted the traditional gallery model with its innovative "Pop Up Gallery Concept." This pioneering approach, which activated unexpected spaces like ARTTENT MTATSMINDA and the highly visible ARTTENT TBILISI MALL, successfully made art accessible to a wider public and established a new standard for engagement. This foundational experience—connecting artists with new audiences in dynamic, high-traffic environments—is the bedrock of our expertise. Today, Arttent transcends its original gallery function to become a dedicated Art Initiatives and Development Organization. We are building upon our legacy of making art accessible by focusing on strategic partnerships, artist advocacy, and opportunity creation.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqHeadingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                            Do you only work with Georgian artists?
+                        </button>
+                    </h3>
+                    <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our focus is on Georgian art and artists based in or connected to Georgia. We actively promote Georgian art locally and internationally, but we also collaborate with international partners and exchange programs when it benefits our artists and clients.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqHeadingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                            I am new to collecting art. Is ARTTENT right for me?
+                        </button>
+                    </h3>
+                    <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes. We regularly work with first-time buyers and help them clarify their taste, budget and goals. Our Discovery Advisory is designed specifically for new collectors who want a safe and informed introduction to Georgian art.
+                        </div>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqHeadingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                            How do you support artists you work with?
+                        </button>
+                    </h3>
+                    <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Artists are our most important clients. We support them with exhibitions, fairs, art projects, publications, marketing, advocacy, training and residency opportunities so they can focus more on their work while we handle management, visibility and connections.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="mb-2">
+                    Still have questions about collecting or collaborating with ARTTENT?
+                </p>
+                <button class="btn btn-primary-arttent" type="button" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer pt-5">
+    <div class="page-container pb-4">
+        <div class="row gy-4">
+            <!-- Brand & Mission -->
+            <div class="col-md-5">
+                <div class="mb-3">
+                    <span class="footer-logo">
+                        <span class="footer-logo-art">ART</span><span class="footer-logo-tent">TENT</span>
+                    </span>
+                </div>
+                <p class="mb-0">
+                    ARTTENT is a Georgian art management company and pop-up gallery concept, enriching the art landscape of Georgia and connecting collectors, artists and institutions.
+                </p>
+            </div>
+            <!-- Contact Details -->
+            <div class="col-md-4">
+                <h3 class="footer-heading">Contact</h3>
+                <p class="mb-1">ARTTENT – Art Management Company</p>
+                <p class="mb-1">Website: <a href="https://www.arttent.ge/" rel="noopener">www.arttent.ge</a></p>
+                <p class="mb-1">Email: <a href="mailto:art@arttent.ge">art@arttent.ge</a></p>
+                <p class="mb-2">Phone: <a href="tel:+995577109955">+995 577 10 99 55</a></p>
+                <p class="mb-0">Art Gallery &middot; Art Advisory &middot; Art Dealing</p>
+            </div>
+            <!-- Social Media -->
+            <div class="col-md-3">
+                <h3 class="footer-heading">Follow</h3>
+                <div class="footer-social-list" aria-label="ARTTENT social media">
+                    <a href="#" class="footer-social-link" aria-label="ARTTENT on Facebook">
+                        <i class="bi bi-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="footer-social-link" aria-label="ARTTENT on Instagram">
+                        <i class="bi bi-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" class="footer-social-link" aria-label="ARTTENT on LinkedIn">
+                        <i class="bi bi-linkedin" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span id="footerYear"></span> ARTTENT. All rights reserved.
+    </div>
+</footer>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalTitle" aria-describedby="contactModalDescription" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="contactModalTitle">Let’s Talk About Art</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="contactModalDescription">
+                    Share a few details about your needs and we will get back to you with curated options from the Georgian art scene.
+                </p>
+                <div id="formAlert" class="d-none"></div>
+                <form id="contactForm" method="POST" action="https://api.staticforms.xyz/submit" novalidate>
+                    <!-- StaticForms hidden fields -->
+                    <input type="hidden" name="subject" value="New inquiry from ARTTENT landing page">
+                    <input type="hidden" name="replyTo" value="@">
+                    <input type="hidden" name="accessKey" value="your-staticforms-api-key">
+
+                    <div class="mb-3">
+                        <label for="contactName" class="form-label">Name *</label>
+                        <input type="text" class="form-control" id="contactName" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label">Email *</label>
+                        <input type="email" class="form-control" id="contactEmail" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactCompany" class="form-label">Company / Organization</label>
+                        <input type="text" class="form-control" id="contactCompany" name="company" placeholder="Your company or institution (optional)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactMessage" class="form-label">How can we help? *</label>
+                        <textarea class="form-control" id="contactMessage" name="message" rows="4" placeholder="Tell us if you are a collector, institution or artist, and what you are looking for." required></textarea>
+                    </div>
+                    <div class="d-flex justify-content-end gap-2">
+                        <button type="button" class="btn btn-outline-dark-arttent" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="submit" class="btn btn-primary-arttent" id="contactSubmitBtn">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" nonce="MzU4OTg3MTMwNywxOTY5Mzc1ODc0"></script>
+
+<script nonce="MzU4OTg3MTMwNywxOTY5Mzc1ODc0">
+    // Build gallery images dynamically so it can scale to many items
+    (function () {
+        var galleryImages = [
+            {
+                src: "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/MUST2.jpg",
+                alt: "ARTTENT exhibition view – MUST series 2",
+                caption: "ARTTENT exhibition view"
+            },
+            {
+                src: "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Copy of 5.jpg",
+                alt: "Artwork showcased in an ARTTENT pop-up gallery",
+                caption: "Pop-up gallery presentation"
+            },
+            {
+                src: "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/IMG_1041.jpg",
+                alt: "Visitors at an ARTTENT exhibition",
+                caption: "Visitors at ARTTENT"
+            },
+            {
+                src: "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/MUST3 .jpeg",
+                alt: "Contemporary artwork from ARTTENT program",
+                caption: "Contemporary Georgian art"
+            },
+            {
+                src: "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/ArtTent 01.08.19 (41 of 69).jpg",
+                alt: "ARTTENT Mtatsminda pop-up exhibition",
+                caption: "ARTTENT Mtatsminda"
+            },
+            {
+                src: "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/IMG_3242.JPG",
+                alt: "Curated artworks installed in interior space",
+                caption: "Curated interior installation"
+            },
+            {
+                src: "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/ArtTent 01.08.19 (29 of 69).jpg",
+                alt: "Outdoor ARTTENT installation in Tbilisi",
+                caption: "Outdoor ARTTENT installation"
+            },
+            {
+                src: "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/arttent Maya.jpg",
+                alt: "ARTTENT founder at exhibition",
+                caption: "ARTTENT team & artists"
+            },
+            {
+                src: "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/ArtTent 01.08.19 (1 of 69).jpg",
+                alt: "Opening of an ARTTENT pop-up show",
+                caption: "Pop-up show opening"
+            }
+            // You can add up to 100+ images here by appending more objects
+        ];
+
+        var galleryGrid = document.getElementById('galleryGrid');
+        if (!galleryGrid || !galleryImages || !galleryImages.length) return;
+
+        var fragment = document.createDocumentFragment();
+
+        galleryImages.forEach(function (item) {
+            if (!item || !item.src) return;
+
+            var col = document.createElement('div');
+            col.className = 'col-6 col-md-4 col-lg-3';
+
+            var figure = document.createElement('figure');
+            figure.className = 'gallery-item';
+
+            var wrapper = document.createElement('div');
+            wrapper.className = 'gallery-image-wrapper';
+
+            var img = document.createElement('img');
+            img.className = 'gallery-image';
+            img.src = item.src;
+            img.alt = item.alt || '';
+            img.loading = 'lazy';
+
+            wrapper.appendChild(img);
+            figure.appendChild(wrapper);
+
+            if (item.caption) {
+                var figcaption = document.createElement('figcaption');
+                figcaption.className = 'gallery-caption';
+                figcaption.textContent = item.caption;
+                figure.appendChild(figcaption);
+            }
+
+            col.appendChild(figure);
+            fragment.appendChild(col);
+        });
+
+        galleryGrid.appendChild(fragment);
+    })();
+
+    // Set current year in footer
+    (function () {
+        var yearSpan = document.getElementById('footerYear');
+        if (yearSpan) {
+            var year = new Date().getFullYear();
+            yearSpan.textContent = '© ' + year;
+        }
+    })();
+
+    // Navbar shadow and background on scroll
+    (function () {
+        var navbar = document.querySelector('.navbar-arttent');
+        function handleScroll() {
+            if (!navbar) return;
+            if (window.scrollY > 10) {
+                navbar.classList.add('navbar-shadow', 'navbar-solid');
+            } else {
+                navbar.classList.remove('navbar-shadow', 'navbar-solid');
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    })();
+
+    // Smooth scrolling for internal links & auto-collapse on mobile
+    (function () {
+        var navLinks = document.querySelectorAll('a.nav-link, a.btn-link-arttent, a.btn-outline-dark-arttent[href^="#"], a[href^="#hero"], a[href^="#benefits"], a[href^="#how-it-works"], a[href^="#testimonials"], a[href^="#pricing"], a[href^="#faqs"]');
+        var navbarCollapse = document.getElementById('navbarMain');
+
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                var targetId = link.getAttribute('href');
+                if (!targetId || targetId.charAt(0) !== '#') {
+                    return;
+                }
+                var targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    event.preventDefault();
+                    var offset = document.querySelector('.navbar-arttent') ? document.querySelector('.navbar-arttent').offsetHeight : 0;
+                    var elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    var offsetPosition = elementPosition - offset + 1;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+
+                    // Collapse navbar on mobile after click
+                    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                        var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
+                    }
+                }
+            });
+        });
+    })();
+
+    // Contact form handling with AJAX for StaticForms
+    (function () {
+        var form = document.getElementById('contactForm');
+        var alertContainer = document.getElementById('formAlert');
+        var submitBtn = document.getElementById('contactSubmitBtn');
+
+        if (!form) return;
+
+        function showAlert(message, type) {
+            if (!alertContainer) return;
+            alertContainer.classList.remove('d-none');
+            alertContainer.classList.remove('alert-success-inline', 'alert-error-inline');
+            if (type === 'success') {
+                alertContainer.classList.add('alert-inline', 'alert-success-inline');
+            } else {
+                alertContainer.classList.add('alert-inline', 'alert-error-inline');
+            }
+            alertContainer.textContent = message;
+        }
+
+        function clearAlert() {
+            if (!alertContainer) return;
+            alertContainer.classList.add('d-none');
+            alertContainer.textContent = '';
+            alertContainer.classList.remove('alert-inline', 'alert-success-inline', 'alert-error-inline');
+        }
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            clearAlert();
+
+            if (!form.checkValidity()) {
+                showAlert('Please fill in all required fields.', 'error');
+                return;
+            }
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+            }
+
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(function () {
+                    showAlert('Thank you. We will contact you shortly.', 'success');
+                    form.reset();
+                })
+                .catch(function () {
+                    showAlert('Something went wrong. Please try again or email us at art@arttent.ge.', 'error');
+                })
+                .finally(function () {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Send Message';
+                    }
+                });
+        });
+
+        // Clear state when modal is closed
+        var contactModalElement = document.getElementById('contactModal');
+        if (contactModalElement) {
+            contactModalElement.addEventListener('hidden.bs.modal', function () {
+                if (form) {
+                    form.reset();
+                }
+                clearAlert();
+            });
+        }
+    })();
+</script>
+</body>
+</html>
