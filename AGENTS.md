@@ -7,6 +7,7 @@ Promotion of ARTTENT’s art initiatives and services, showcasing artists and pr
 Design Preferences  
 Clean, contemporary, art‑focused presentation.  
 Hero section content centered horizontally and vertically across all viewport sizes, with responsive scaling.  
+Hero background image positioned left-bottom so the darkest area is prominent, without device-specific variants.  
 Artist blocks use rectangular visuals with names placed in the lower left.  
 Logo only on the left side of the navbar, significantly larger than before, scaling down appropriately on mobile.  
 Single logo asset with transparent background; visual treatment varies with navbar background (normal on light, inverted on dark/transparent).  
