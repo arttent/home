@@ -1,0 +1,489 @@
+# ARTTENT Landing Page Specification
+
+## 1. Overview
+A single-page, mobile-first landing website for **ARTTENT – Art Business Management Company**. The page positions ARTTENT primarily for **collectors and buyers**, with a strong secondary message for **artists**, highlighting ARTTENT as an innovative pop-up gallery and full-service art management company.
+
+The page includes sections: Navigation bar, Hero, Benefits, How It Works, Testimonials, Pricing, FAQs, and Footer, plus a reusable contact/modal form.
+
+---
+
+## 2. Brand & Design System
+
+### 2.1 Brand Personality
+- Clean, minimal, contemporary
+- Accessible and welcoming, not intimidating
+- Confident, cultured, and international
+
+### 2.2 Colors
+- **Primary Background**: Soft off‑white `#F9FAFB`
+- **Main Text**: Charcoal `#1F2933`
+- **Secondary Text**: Muted gray `#6B7280`
+- **Accent (Yellow/Orange)**: Warm amber `rgb(234, 165, 6)`
+- **Dark Accent**: Deep charcoal `#111827`
+- **Light Accent Backgrounds / Cards**: Very light gray `#F3F4F6`
+- **Borders / Lines**: Light gray `#E5E7EB`
+- **Success / Confirmation**: Emerald `#10B981`
+- **Error / Alert**: Red `#EF4444`
+
+Usage:
+- Page background: `#F9FAFB`
+- Hero highlight elements and buttons: `rgb(234, 165, 6)` with white text
+- Secondary buttons / outlines: `#111827` text and border on white background
+- Sections alternate between white and very light gray for clear separation
+
+### 2.3 Typography
+(Use Google Fonts; names are provided for designers, not for users.)
+- **Headings (H1–H3)**: "Bebas Neue", a condensed, modern sans-serif loaded from Google Fonts
+- **Body Text**: Simple sans-serif (e.g., system UI stack or a Google Font like "Inter")
+- **Style**:
+  - Headings: Bold, clear, with generous spacing and strong hierarchy
+  - Body: Regular weight, high readability
+  - All text left-aligned except for hero and section titles that can be centered on mobile
+
+### 2.4 Spacing & Layout
+- **Max content width**: About 1100–1200px, centered
+- **Horizontal padding**:
+  - Mobile: ~16–20px
+  - Desktop: ~40–60px
+- **Vertical spacing**:
+  - Major sections: ~80–100px top and bottom on desktop, ~56–72px on mobile
+  - Space between blocks (e.g., headings and text): ~16–24px
+
+### 2.5 Buttons & Interactions
+- **Primary button** (used for main actions like “Book a Consultation” or “Submit”):
+  - Background: `rgb(234, 165, 6)`
+  - Text: White
+  - Shape: Slightly rounded corners
+  - Hover: Slightly darker accent (e.g., `rgb(214, 145, 0)`) with subtle shadow
+- **Secondary button**:
+  - Border: `#111827`
+  - Text: `#111827`
+  - Background: transparent or white
+  - Hover: Light gray background `#F3F4F6`
+
+- **Links**:
+  - Text color: `#111827`
+  - Hover: Underline and slight color shift toward `rgb(234, 165, 6)`
+
+### 2.6 Imagery & Icons
+- **Logo / Wordmark**: Text-only logo using the brand name
+  - Wordmark text: `ARTTENT`
+  - Styling: "ART" in light color suitable over the hero image (e.g., `#F3F4F6`), "TENT" in accent color `rgb(234, 165, 6)`
+- **Hero Image**: Full-width image in hero section
+  - `https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/art_tent_hero_1920x768.jpg`
+- **Icons**:
+  - Use Google icons or other free icon sets via CDN (for benefits, steps, social icons, etc.)
+  - Simple outlined or filled icons, minimal style
+
+### 2.7 General Style
+- Clean, lots of white space
+- Clear section separation using background color changes and subtle dividers
+- Minimal animations (soft fades or slides) if desired, but not required
+
+---
+
+## 3. Technical & Global Requirements
+
+- Single `index.html` file
+- Use **Bootstrap 5.3.8** via CDN for layout and basic styling (no integrity check):
+  ```html
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  ```
+- No inline styles; use `<style>` block in the `<head>` for custom CSS
+- Responsive and mobile-first
+- Accessible:
+  - Proper heading order (H1 then H2, etc.)
+  - Alt text on all images
+  - Sufficient color contrast
+  - ARIA attributes for modal and navigation where helpful
+  - Keyboard-focusable links and buttons
+- Performance and security:
+  - Use compressed external assets only by URL (no unnecessary scripts)
+  - Avoid heavy external libraries besides Bootstrap and icons
+- SEO optimized (filled meta tags, headings, structured content)
+- Support for Google Analytics (placeholder script ID in the spec)
+- Use **staticforms.xyz** with AJAX for the contact/modal form
+- All navigation links scroll smoothly to sections on the same page
+
+---
+
+## 4. Page Structure & Content
+
+### 4.1 HTML `<head>` Requirements
+
+Include:
+- Preconnects and Google Font for headings:
+  - `<link rel="preconnect" href="https://fonts.googleapis.com">`
+  - `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>`
+  - `<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">`
+- `<title>`: `ARTTENT – Georgian Art Management, Galleries & Art Advisory`
+- **Meta description**:
+  - `Discover ARTTENT, a Georgian art business management company and pop-up gallery concept connecting collectors, buyers and artists through exhibitions, art advisory, art dealing, and curated cultural projects in Georgia and beyond.`
+- **Meta keywords**:
+  - `ARTTENT, Georgian art, art gallery Tbilisi, art advisory, art dealing, art management, art consulting, art exhibitions Georgia, pop-up gallery, art collectors, buy art Georgia`
+- **Meta charset**: `UTF-8`
+- **Meta viewport** for mobile
+- **Open Graph tags**:
+  - `og:title`: `ARTTENT – Georgian Art Management, Galleries & Art Advisory`
+  - `og:description`: same as meta description
+  - `og:type`: `website`
+  - `og:url`: `https://www.arttent.ge/` (placeholder)
+  - `og:image`: `https://cdn.breba.app/templates/images/hero.jpg`
+- **Twitter Card tags**:
+  - `twitter:card`: `summary_large_image`
+  - `twitter:title`: `ARTTENT – Georgian Art Management, Galleries & Art Advisory`
+  - `twitter:description`: same as meta description
+  - `twitter:image`: `https://cdn.breba.app/templates/images/hero.jpg`
+- **Favicon**: Placeholder link (e.g., `/favicon.ico`)
+
+### 4.2 Google Analytics
+Include a placeholder GA4 script in the `<head>` (or just before `</body>`), with a dummy ID that can be replaced later:
+```html
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} 
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+```
+
+---
+
+## 5. Navigation Bar
+
+### 5.1 Layout & Content
+- Fixed or sticky at the top when scrolling
+- Initial background: transparent so the hero image shows behind the navbar on page load
+- On scroll (after the user starts scrolling down): navbar background changes to solid `#F9FAFB` with subtle bottom border (`#E5E7EB`) and a light shadow for separation
+- Navbar text color behavior:
+  - On transparent/dark hero background: wordmark “ART” and all nav links use a light text color (`#F3F4F6`) for contrast, while “TENT” stays in the accent color
+  - When the navbar switches to the light background: wordmark “ART” and all nav links switch to dark text color (`#1F2933` with high priority in CSS if needed), while “TENT` remains in the accent color `rgb(234, 165, 6)`
+- Left side: **Logo / wordmark** text
+  - Wordmark text: `ARTTENT`
+  - Clicking logo scrolls to top (Hero section)
+- Centered navigation links between logo and any right-side content
+
+### 5.2 Navigation Links
+Use smooth scrolling to each section:
+- **Benefits** – `#benefits`
+- **How It Works** – `#how-it-works`
+- **Testimonials** – `#testimonials`
+- **FAQs** – `#faqs`
+
+### 5.3 Call-to-Action Button in Navbar
+- No separate CTA button in the navbar; primary calls to action are placed in the Hero and other sections.
+
+### 5.4 Mobile Navigation
+- Collapsible hamburger menu (Bootstrap navbar toggler)
+- Menu items stacked vertically on mobile, including CTA button at bottom of menu
+
+---
+
+## 6. Hero Section
+
+### 6.1 Section Basics
+- `id="hero"`
+- Full-viewport section at top
+- Background: hero image fills full height and width of the viewport and scales smoothly both vertically and horizontally (use full-bleed background image), with a semi-transparent overlay gradient:
+  - `linear-gradient(135deg, #000000b3, #0006, #eaa50633)` on top of the hero image to improve text readability
+- Content centered vertically and horizontally within viewport height (full-height hero, ~100vh)
+
+### 6.2 Left Column (Text)
+- Text in the hero sits on top of a relatively dark image; use light-colored typography with subtle shadow for readability.
+- **Label/eyebrow text** (small, uppercase):
+  - `GEORGIAN ART MANAGEMENT & POP-UP GALLERIES`
+  - Style: light warm accent tone on dark image background
+- **Main headline (H1)**:
+  - `Turn Georgian Art Into a Living Collection`
+  - Style: white text with a soft text-shadow for contrast against the image
+- **Subheadline (short paragraph)**:
+  - `ARTTENT connects collectors, buyers and visionary artists through curated exhibitions, advisory, and innovative pop-up galleries across Georgia.`
+  - Style: very light gray text to remain legible on the darkened hero image
+- **Primary CTA button**:
+  - Label: `Our Artists`
+  - Action: Scrolls to Benefits section (or a sub-anchor in Benefits) focused on artists, using link to `#benefits`
+- **Secondary CTA button (text or outline)**:
+  - Label: `About Us`
+  - Action: Scrolls to Benefits section (or a sub-anchor in Benefits) focused on artists, using link to `#benefits`
+
+### 6.3 Right Column (Image)
+- Use hero image:
+  - `https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/art_tent_hero_1920x768.jpg`
+  - Alt text: `Visitors exploring contemporary art at an ARTTENT exhibition`
+- Image displayed responsively with rounded corners and subtle shadow
+
+---
+
+## 7. Artist Roster Section
+
+### 7.1 Section Basics
+- `id="benefits"` (reused anchor so existing links still scroll correctly)
+- Background: white (`#FFFFFF`)
+- Centered section title and intro text
+- This section presents a curated roster of artists represented by ARTTENT
+
+### 7.2 Section Heading
+- **H2**: `Our Artist Roster`
+- **Short description**:
+  - `Meet the artists represented by ARTTENT. We are proud to work with a diverse group of established and emerging talents shaping the Georgian art scene.`
+
+### 7.3 Artist Cards
+Display artists in a responsive grid with:
+- Top row: 3 artists
+- Second row: 2 artists
+- On mobile: stack to 1 artist per row
+
+Each artist card includes:
+- Optional portrait image (circle or rounded)
+- Name
+- Optional discipline / focus (can be added later)
+- Optional very short descriptive line (1–2 sentences max, can be added later)
+
+Defined artists:
+1. `Maka Zedelashvili`
+2. `Maka Jishkariani`
+3. `Tamar Gedevanishvili`
+4. `Laka Popkhadze`
+5. `Elene Rekhviashvili`
+
+At the bottom of the section, include a short call-to-action line:
+- Text: `Interested in exhibiting or exploring our full roster?`
+- Link or button: `Contact us for the full portfolio` → opens contact modal
+
+---
+
+## 8. How It Works Section
+
+### 8.1 Section Basics
+- `id="how-it-works"`
+- Background: very light gray `#F3F4F6`
+
+### 8.2 Section Heading
+- **H2**: `How ARTTENT Works With Collectors`
+- **Short description**:
+  - `A simple, guided process from first conversation to long-term collection strategy.`
+
+### 8.3 Three Steps
+Display steps as numbered cards or timeline; each step has a number, title, and description.
+
+1. **Step 1**
+   - Title: `Listen & Understand`
+   - Description: `We start with a consultation to understand your taste, goals, budget and spaces—whether you collect privately or for hotels, offices or public venues.`
+
+2. **Step 2**
+   - Title: `Curate & Propose`
+   - Description: `Our team researches the Georgian art scene, curates tailored selections, and proposes artworks, exhibitions or commissions that fit your vision.`
+
+3. **Step 3**
+   - Title: `Acquire & Grow`
+   - Description: `We manage negotiations, due diligence, transport and installation, and support you in growing a coherent collection over time.`
+
+Include a small CTA at bottom:
+- Text: `Ready to explore Georgian art?`
+- Button: `Start Your Collection` → opens contact modal
+
+---
+
+## 9. Testimonials Section
+
+### 9.1 Section Basics
+- `id="testimonials"`
+- Background: white (`#FFFFFF`)
+
+### 9.2 Section Heading
+- **H2**: `What Our Partners Say`
+- **Short description**:
+  - `Collectors, institutions and artists share their experiences with ARTTENT.`
+
+### 9.3 Testimonial Cards (3 items)
+Each testimonial card should include quote text, name, role/affiliation, and optional small avatar placeholder (can use generic icon or simple circle with initials).
+
+1. **Testimonial 1 – Collector**
+   - Quote: `“ARTTENT helped us build a collection that feels deeply connected to Georgia while still speaking an international visual language. Their guidance was clear, honest and inspiring.”`
+   - Name: `Nino K.`
+   - Role: `Private Collector, Tbilisi`
+
+2. **Testimonial 2 – Corporate Client**
+   - Quote: `“For our hotel, ARTTENT curated artworks and installations that transformed public areas into cultural experiences. They managed everything from artist selection to final placement.”`
+   - Name: `David M.`
+   - Role: `General Manager, Boutique Hotel`
+
+3. **Testimonial 3 – Artist**
+   - Quote: `“Showing with ARTTENT opened my work to audiences I could never reach on my own—especially through their pop-up galleries in public spaces and the mall.”`
+   - Name: `Ana T.`
+   - Role: `Contemporary Artist`
+
+---
+
+## 11. FAQs Section
+
+### 11.1 Section Basics
+- `id="faqs"`
+- Background: white (`#FFFFFF`)
+
+### 11.2 Section Heading
+- **H2**: `Frequently Asked Questions`
+- **Short description**:
+  - `Answers to common questions from collectors, buyers and artists.`
+
+### 11.3 FAQ List (5 questions)
+Use an accordion layout (Bootstrap collapse) with the following Q&A; each FAQ item has a question and a short answer paragraph.
+
+1. **Q1**: `What makes ARTTENT different from a traditional gallery?`
+   - **A1**: `ARTTENT is an art business management company and a pop-up gallery concept. We organize exhibitions in public and unexpected locations—such as parks and shopping malls—making art more visible and accessible, while also providing professional advisory and management services for both collectors and artists.`
+
+2. **Q2**: `Do you only work with Georgian artists?`
+   - **A2**: `Our focus is on Georgian art and artists based in or connected to Georgia. We actively promote Georgian art locally and internationally, but we also collaborate with international partners and exchange programs when it benefits our artists and clients.`
+
+3. **Q3**: `I am new to collecting art. Is ARTTENT right for me?`
+   - **A3**: `Yes. We regularly work with first-time buyers and help them clarify their taste, budget and goals. Our Discovery Advisory is designed specifically for new collectors who want a safe and informed introduction to Georgian art.`
+
+4. **Q4**: `How do you support artists you work with?`
+   - **A4**: `Artists are our most important clients. We support them with exhibitions, fairs, art projects, publications, marketing, advocacy, training and residency opportunities so they can focus more on their work while we handle management, visibility and connections.`
+
+5. **Q5**: `Where can I see ARTTENT exhibitions in person?`
+   - **A5**: `ARTTENT runs pop-up galleries such as ARTTENT Mtatsminda and ARTTENT Tbilisi Mall, and collaborates with galleries, institutions and public spaces in Georgia. For current and upcoming exhibitions, please contact us through the form or visit our website.`
+
+At the end of the FAQ section, include a short call-to-action:
+- Text: `Still have questions about collecting or collaborating with ARTTENT?`
+- Button: `Contact Us` → opens contact modal
+
+---
+
+## 12. Footer
+
+### 12.1 Layout & Content
+- Background: deep charcoal `#111827`
+- Text: light gray / white
+- Split into three main areas on desktop; stacked on mobile
+
+#### 12.1.1 Brand & Mission
+- Logo (small) using the square logo on dark background
+- Short text:
+  - `ARTTENT is a Georgian art business management company and pop-up gallery concept, enriching the art landscape of Georgia and connecting collectors, artists and institutions.`
+
+#### 12.1.2 Contact Details
+Display as text list:
+- Heading: `Contact`
+- `ARTTENT – Art Business Management Company`
+- `Website: www.arttent.ge`
+- `Email: art@arttent.ge`
+- `Phone: +995 577 10 99 55`
+- Services list (short line): `Art Gallery · Art Advisory · Art Dealing`
+
+#### 12.1.3 Social Media Icons
+Use icon buttons (e.g., from Bootstrap icons or Google icons) with labels for accessibility. Links can be placeholders:
+- Icons and labels:
+  - Facebook – link `#`
+  - Instagram – link `#`
+  - LinkedIn – link `#`
+- Style: white icons on dark background, circular hover effect with accent color outline
+
+#### 12.1.4 Bottom Bar
+- Thin line on top
+- Small copyright line centered:
+  - `© {current year} ARTTENT. All rights reserved.`
+
+---
+
+## 13. Modal Contact Form
+
+### 13.1 General
+- Single reusable modal used for all CTAs (`Book a Consultation`, `Start Your Collection`, `Request Proposal`, `Discuss a Project`, `Contact Us`)
+- Accessible modal using Bootstrap’s modal component
+- `aria-labelledby` and `aria-describedby` attributes
+
+### 13.2 Modal Content
+- Title: `Let’s Talk About Art`
+- Short description under title:
+  - `Share a few details about your needs and we will get back to you with curated options from the Georgian art scene.`
+
+### 13.3 Form Fields
+Use a standard HTML `<form>` inside modal body.
+
+Visible fields (all with labels and placeholders):
+1. **Name** (required)
+   - Label: `Name`
+   - Placeholder: `Your full name`
+
+2. **Email** (required)
+   - Label: `Email`
+   - Placeholder: `you@example.com`
+   - Input type: `email`
+
+3. **Company** (optional)
+   - Label: `Company / Organization`
+   - Placeholder: `Your company or institution (optional)`
+
+4. **Message** (required, textarea)
+   - Label: `How can we help?`
+   - Placeholder: `Tell us if you are a collector, institution or artist, and what you are looking for.`
+
+Hidden fields for StaticForms:
+- `subject` – value: `New inquiry from ARTTENT landing page`
+- `replyTo` – value: `@`
+- `apiKey` – example placeholder: `your-staticforms-api-key` (clearly marked as to be replaced)
+
+### 13.4 Form Integration (staticforms.xyz with AJAX)
+
+Form attributes:
+- `method="POST"`
+- `action="https://api.staticforms.xyz/submit"`
+
+AJAX behavior (implemented via JavaScript in `<script>` at end of body):
+- On submit:
+  - Prevent default page reload
+  - Send form data using `fetch` or `XMLHttpRequest` to StaticForms API
+  - On success:
+    - Show a success alert or message inside modal: `Thank you. We will contact you shortly.`
+    - Optionally clear fields
+  - On error:
+    - Show an error message: `Something went wrong. Please try again or email us at art@arttent.ge.`
+
+Buttons in modal:
+- Primary submit button:
+  - Label: `Send Message`
+  - Style: primary accent button
+- Secondary close button (in footer or header):
+  - Label: `Close`
+  - Closes modal without submitting
+
+---
+
+## 14. Additional JavaScript Behavior
+
+- **Smooth Scrolling**: When nav links are clicked, scroll smoothly to target sections.
+- **Navbar Behavior**:
+  - Collapse menu automatically after clicking a link on mobile
+  - Add subtle background shadow when page is scrolled down
+- **Form Handling**: As described in Modal section (AJAX submit, show response messages)
+
+---
+
+## 15. Accessibility & SEO Notes
+
+- Use semantic HTML tags for each section (`<header>`, `<main>`, `<section>`, `<footer>`)
+- Single H1 in hero section; H2 for each main section; H3/H4 for nested headings
+- Descriptive link and button texts (no generic “Click here”)
+- `alt` text for all images, especially logo and hero
+- ARIA labels for:
+  - Navigation (`aria-label="Main navigation"`)
+  - Social media icons (`aria-label="ARTTENT on Instagram"`, etc.)
+  - Modal (`role="dialog"` with proper `aria-modal="true"`)
+- Ensure color contrast meets accessibility guidelines (dark text on light backgrounds; white text on accent buttons)
+
+---
+
+## 16. Summary of Main Calls to Action
+
+All these buttons open the same contact modal:
+- Navbar: `Book a Consultation`
+- Hero: `Book a Consultation`
+- Hero secondary: `For Artists` (scrolls to Benefits)
+- How It Works: `Start Your Collection`
+- FAQ: `Contact Us`
+
+This specification fully describes the structure, content, and styling guidelines needed to implement the ARTTENT landing page in a single `index.html` file.

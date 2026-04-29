@@ -22,15 +22,16 @@
     <meta name="twitter:description" content="Discover ARTTENT, a Georgian art management company and pop-up gallery concept connecting collectors, buyers and artists through exhibitions, art advisory, art dealing, and curated cultural projects in Georgia and beyond.">
     <meta name="twitter:image" content="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Copy%20of%203.jpg">
 
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
-    <script type="application/ld+json" nonce="MzU4OTg3MTMwNywxOTY5Mzc1ODc0">
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "ARTTENT",
       "url": "https://www.arttent.ge/",
-      "logo": "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/LOGO%20arttent%20galleries.jpg",
+      "logo": "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/LOGO%20arttent%20galleries%20(2).jpg",
       "sameAs": [
         "https://www.facebook.com/ArtTentTbilisi/"
       ]
@@ -49,8 +50,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Google Analytics (placeholder) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" nonce="MzU4OTg3MTMwNywxOTY5Mzc1ODc0"></script>
-    <script nonce="MzU4OTg3MTMwNywxOTY5Mzc1ODc0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -137,6 +138,13 @@
             transition: box-shadow 0.2s ease, background-color 0.2s ease, border-bottom-color 0.2s;
         }
 
+        .navbar-arttent .page-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
         .navbar-arttent.navbar-solid {
             background-color: var(--color-bg-main);
             border-bottom: 1px solid var(--color-border);
@@ -155,6 +163,7 @@
             letter-spacing: 0.04em;
             text-transform: uppercase;
             line-height: 1;
+            gap: 0.5rem;
         }
         .navbar-wordmark-art {
             color: #f3f4f6;
@@ -170,8 +179,61 @@
         .navbar-arttent.navbar-solid .navbar-wordmark-tent {
             color: rgb(234, 165, 6);
         }
+        .navbar-brand {
+            flex-shrink: 1;
+            min-width: 0;
+        }
+
         .navbar-brand img {
-            display: none;
+            display: inline-block;
+            height: clamp(2rem, 8vw, 7.5rem);
+            width: auto;
+            max-width: min(70vw, 18rem);
+            object-fit: contain;
+            filter: invert(1);
+            transition: filter 0.2s ease;
+        }
+
+        .navbar-arttent.navbar-solid .navbar-brand img {
+            filter: none;
+        }
+
+        .navbar-collapse {
+            justify-content: flex-end;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbar-toggler {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            padding: 0;
+            color: #f3f4f6;
+            border-radius: 999px;
+            background-color: rgba(17, 24, 39, 0.45);
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .navbar-toggler:hover,
+        .navbar-toggler:focus {
+            background-color: rgba(17, 24, 39, 0.7);
+            color: #ffffff;
+            box-shadow: none;
+        }
+
+        .navbar-toggler .bi-list {
+            font-size: 1.75rem;
+            line-height: 1;
+        }
+
+        .navbar-arttent.navbar-solid .navbar-toggler {
+            color: var(--color-dark);
+            background-color: rgba(17, 24, 39, 0.06);
         }
 
         .nav-link {
@@ -286,6 +348,8 @@
             max-width: var(--max-width);
             margin: 0 auto;
             padding-inline: 1rem;
+            padding-top: clamp(5.5rem, 10vh, 7.5rem);
+            padding-bottom: clamp(2rem, 5vh, 3.5rem);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -303,19 +367,23 @@
 
         .hero-inner {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 2.5rem;
+            grid-template-columns: minmax(0, 1fr);
+            gap: clamp(1.5rem, 4vw, 3rem);
             align-items: center;
+            justify-items: center;
+            width: 100%;
+            margin: auto 0;
         }
 
         @media (min-width: 992px) {
             .hero-inner {
-                grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+                grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
             }
         }
 
         .hero-main {
-            max-width: 32rem;
+            max-width: 42rem;
+            width: 100%;
         }
 
         .hero-main-centered {
@@ -325,11 +393,11 @@
 
         @media (min-width: 992px) {
             .hero-main {
-                text-align: left;
+                text-align: center;
             }
             .hero-main-centered {
-                text-align: left;
-                margin-inline: 0;
+                text-align: center;
+                margin-inline: auto;
             }
         }
 
@@ -380,8 +448,9 @@
 
         .hero-subtitle {
             color: #f3f4f6;
-            font-size: 1rem;
-            max-width: 34rem;
+            font-size: clamp(1rem, 1.1vw + 0.8rem, 1.25rem);
+            max-width: 42rem;
+            margin-inline: auto;
         }
 
         .hero-meta {
@@ -406,8 +475,12 @@
             margin-top: 1.75rem;
         }
 
+        .hero-inner > .hero-main {
+            align-self: center;
+        }
+
         .hero-secondary {
-            font-size: 0.9rem;
+            font-size: clamp(0.95rem, 0.4vw + 0.85rem, 1.05rem);
             color: #e5e7eb;
             margin-top: 0.75rem;
         }
@@ -417,8 +490,9 @@
             background-color: rgba(17, 24, 39, 0.78);
             border-radius: 1.25rem;
             border: 1px solid rgba(249, 250, 251, 0.08);
-            padding: 1.5rem 1.4rem;
-            max-width: 24rem;
+            padding: clamp(1.25rem, 2vw, 1.75rem);
+            width: min(100%, 32rem);
+            max-width: 32rem;
             margin-inline: auto;
             box-shadow: 0 1.5rem 3.5rem rgba(15, 23, 42, 0.55);
         }
@@ -461,6 +535,61 @@
         .hero-side-meta {
             font-size: 0.78rem;
             color: #9ca3af;
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-arttent .page-container {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) auto;
+                align-items: center;
+                column-gap: 0.75rem;
+            }
+
+            .navbar-arttent .navbar-brand {
+                order: 1;
+                justify-self: start;
+            }
+
+            .navbar-arttent .navbar-toggler {
+                order: 2;
+                justify-self: end;
+            }
+
+            .navbar-arttent .navbar-collapse {
+                order: 3;
+                grid-column: 1 / -1;
+                margin-top: 0.75rem;
+                padding: 0.875rem 1rem;
+                border-radius: 1rem;
+                background-color: rgba(17, 24, 39, 0.88);
+                backdrop-filter: blur(14px);
+            }
+
+            .navbar-arttent.navbar-solid .navbar-collapse {
+                background-color: rgba(249, 250, 251, 0.97);
+                border: 1px solid var(--color-border);
+            }
+
+            .navbar-arttent .navbar-nav {
+                gap: 0.5rem !important;
+            }
+
+            .navbar-arttent .nav-link {
+                display: block;
+                padding: 0.5rem 0;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-badge {
+                margin-inline: auto;
+            }
+
+            .hero-side-card {
+                width: min(100%, 36rem);
+            }
         }
 
         .hero-eyebrow {
@@ -572,6 +701,39 @@
             margin-inline: auto;
             margin-bottom: 0.75rem;
             background: radial-gradient(circle at 30% 20%, #e5e7eb, #d1d5db);
+        }
+
+        .artist-card-corner {
+            position: relative;
+            justify-content: flex-end;
+            align-items: flex-start;
+            min-height: 12rem;
+            text-align: left;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .artist-card-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .artist-card-caption {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            margin-top: auto;
+            padding: 1rem 1.25rem;
+            background: linear-gradient(to top, rgba(17, 24, 39, 0.82), rgba(17, 24, 39, 0.08));
+        }
+
+        .artist-card-name-corner {
+            margin: 0;
+            text-align: left;
+            color: #ffffff;
         }
 
         /* How It Works */
@@ -710,13 +872,21 @@
         }
 
         .footer-logo {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             font-family: 'Bebas Neue', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: 0.04em;
             text-transform: uppercase;
             line-height: 1;
+        }
+
+        .footer-logo img {
+            max-height: 2.75rem;
+            width: auto;
+            display: inline-block;
         }
 
         .footer-logo-art {
@@ -825,13 +995,14 @@
     <nav class="navbar navbar-expand-lg navbar-arttent fixed-top" aria-label="Main navigation">
         <div class="container-fluid page-container">
             <a class="navbar-brand" href="#hero" aria-label="ARTTENT home">
-                <span class="navbar-wordmark-art">ART</span><span class="navbar-wordmark-tent">TENT</span>
+                <img src="https://cdn.breba.app/68d416f8d502012f1b75ec72/acffaf48e69b4ed78bac97ce8f9421f8/assets/arttent_logo_transparent_bg.webp" alt="ARTTENT logo" loading="eager" fetchpriority="high">
+                <span class="navbar-wordmark-art visually-hidden">ART</span><span class="navbar-wordmark-tent visually-hidden">TENT</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="bi bi-list" aria-hidden="true"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarMain">
-                <ul class="navbar-nav mb-3 mb-lg-0 gap-3">
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mb-3 mb-lg-0 gap-3 gap-lg-4">
                     <li class="nav-item">
                         <a class="nav-link" href="#benefits">Benefits</a>
                     </li>
@@ -866,7 +1037,7 @@
                 <div class="hero-main hero-main-centered">
                     <div class="hero-badge">
                         <span class="hero-badge-dot"></span>
-                        Georgian Art Management &amp; Pop-Up Galleries
+                        Georgian Art Management Company Since 2019
                     </div>
                     <h1 class="hero-heading">Turn Georgian Art Into a Living Collection</h1>
                     <p class="hero-subtitle">
@@ -952,42 +1123,71 @@
             <div class="row g-4 justify-content-center">
                 <!-- Top row: 3 artists -->
                 <div class="col-12 col-md-4 d-flex">
-                    <article class="card-arttent h-100 text-center flex-fill w-100">
-                        <div class="artist-avatar">
-                            <!-- Artist portrait can be placed here in the future -->
+                    <article class="card-arttent artist-card-corner d-flex flex-column h-100 flex-fill w-100">
+                        <img
+                            src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/maka%20zadelashvili1.jpg"
+                            class="artist-card-image"
+                            alt="Painting by Maka Zedelashvili"
+                            loading="lazy"
+                        >
+                        <div class="artist-card-caption">
+                            <h3 class="card-title-arttent artist-card-name-corner">Maka Zedelashvili</h3>
                         </div>
-                        <h3 class="card-title-arttent mb-1">Maka Zedelashvili</h3>
                     </article>
                 </div>
                 <div class="col-12 col-md-4 d-flex">
-                    <article class="card-arttent h-100 text-center flex-fill w-100">
-                        <div class="artist-avatar">
+                    <article class="card-arttent artist-card-corner d-flex flex-column h-100 flex-fill w-100">
+                        <img
+                            src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Maka%20J1.jpg"
+                            class="artist-card-image"
+                            alt="Artwork by Maka Jishkariani"
+                            loading="lazy"
+                        >
+                        <div class="artist-card-caption">
+                            <h3 class="card-title-arttent artist-card-name-corner">Maka Jishkariani</h3>
                         </div>
-                        <h3 class="card-title-arttent mb-1">Maka Jishkariani</h3>
                     </article>
                 </div>
                 <div class="col-12 col-md-4 d-flex">
-                    <article class="card-arttent h-100 text-center flex-fill w-100">
-                        <div class="artist-avatar">
+                    <article class="card-arttent artist-card-corner d-flex flex-column h-100 flex-fill w-100">
+                        <img
+                            src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/tamar%20gedevanishvili1.jpg"
+                            class="artist-card-image"
+                            alt="Painting by Tamar Gedevanishvili"
+                            loading="lazy"
+                        >
+                        <div class="artist-card-caption">
+                            <h3 class="card-title-arttent artist-card-name-corner">Tamar Gedevanishvili</h3>
                         </div>
-                        <h3 class="card-title-arttent mb-1">Tamar Gedevanishvili</h3>
                     </article>
                 </div>
             </div>
             <div class="row g-4 justify-content-center mt-0">
                 <!-- Second row: 2 artists -->
                 <div class="col-12 col-md-6 d-flex">
-                    <article class="card-arttent h-100 text-center flex-fill w-100">
-                        <div class="artist-avatar">
+                    <article class="card-arttent artist-card-corner d-flex flex-column h-100 flex-fill w-100">
+                        <img
+                            src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Laka%20Popkhadze.jpg"
+                            class="artist-card-image"
+                            alt="Painting by Laka Popkhadze"
+                            loading="lazy"
+                        >
+                        <div class="artist-card-caption">
+                            <h3 class="card-title-arttent artist-card-name-corner">Laka Popkhadze</h3>
                         </div>
-                        <h3 class="card-title-arttent mb-1">Laka Popkhadze</h3>
                     </article>
                 </div>
                 <div class="col-12 col-md-6 d-flex">
-                    <article class="card-arttent h-100 text-center flex-fill w-100">
-                        <div class="artist-avatar">
+                    <article class="card-arttent artist-card-corner d-flex flex-column h-100 flex-fill w-100">
+                        <img
+                            src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Elene%20Rakviashvili.jpg"
+                            class="artist-card-image"
+                            alt="Painting by Elene Rakviashvili"
+                            loading="lazy"
+                        >
+                        <div class="artist-card-caption">
+                            <h3 class="card-title-arttent artist-card-name-corner">Elene Rakviashvili</h3>
                         </div>
-                        <h3 class="card-title-arttent mb-1">Elene Rekhviashvili</h3>
                     </article>
                 </div>
             </div>
@@ -1146,7 +1346,8 @@
             <div class="col-md-5">
                 <div class="mb-3">
                     <span class="footer-logo">
-                        <span class="footer-logo-art">ART</span><span class="footer-logo-tent">TENT</span>
+                        <img src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/LOGO%20arttent%20galleries%20(2).jpg" alt="ARTTENT logo" loading="lazy">
+                        <span class="footer-logo-art visually-hidden">ART</span><span class="footer-logo-tent visually-hidden">TENT</span>
                     </span>
                 </div>
                 <p class="mb-0">
@@ -1156,7 +1357,7 @@
             <!-- Contact Details -->
             <div class="col-md-4">
                 <h3 class="footer-heading">Contact</h3>
-                <p class="mb-1">ARTTENT – Art Management Company</p>
+                <p class="mb-1">ARTTENT – Georgian Art Management Company</p>
                 <p class="mb-1">Website: <a href="https://www.arttent.ge/" rel="noopener">www.arttent.ge</a></p>
                 <p class="mb-1">Email: <a href="mailto:art@arttent.ge">art@arttent.ge</a></p>
                 <p class="mb-2">Phone: <a href="tel:+995577109955">+995 577 10 99 55</a></p>
@@ -1234,9 +1435,9 @@
 </div>
 
 <!-- Bootstrap Bundle JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" nonce="MzU4OTg3MTMwNywxOTY5Mzc1ODc0"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script nonce="MzU4OTg3MTMwNywxOTY5Mzc1ODc0">
+<script>
     // Build gallery images dynamically so it can scale to many items
     (function () {
         var galleryImages = [
@@ -1284,8 +1485,466 @@
                 src: "https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/ArtTent 01.08.19 (1 of 69).jpg",
                 alt: "Opening of an ARTTENT pop-up show",
                 caption: "Pop-up show opening"
+            },
+
+            /* Placeholder images for future gallery items (10–100).
+               Replace each src with your real image URL and update alt/caption text. */
+
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+10",
+                alt: "Placeholder artwork 10",
+                caption: "Placeholder artwork 10"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+11",
+                alt: "Placeholder artwork 11",
+                caption: "Placeholder artwork 11"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+12",
+                alt: "Placeholder artwork 12",
+                caption: "Placeholder artwork 12"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+13",
+                alt: "Placeholder artwork 13",
+                caption: "Placeholder artwork 13"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+14",
+                alt: "Placeholder artwork 14",
+                caption: "Placeholder artwork 14"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+15",
+                alt: "Placeholder artwork 15",
+                caption: "Placeholder artwork 15"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+16",
+                alt: "Placeholder artwork 16",
+                caption: "Placeholder artwork 16"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+17",
+                alt: "Placeholder artwork 17",
+                caption: "Placeholder artwork 17"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+18",
+                alt: "Placeholder artwork 18",
+                caption: "Placeholder artwork 18"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+19",
+                alt: "Placeholder artwork 19",
+                caption: "Placeholder artwork 19"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+20",
+                alt: "Placeholder artwork 20",
+                caption: "Placeholder artwork 20"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+21",
+                alt: "Placeholder artwork 21",
+                caption: "Placeholder artwork 21"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+22",
+                alt: "Placeholder artwork 22",
+                caption: "Placeholder artwork 22"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+23",
+                alt: "Placeholder artwork 23",
+                caption: "Placeholder artwork 23"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+24",
+                alt: "Placeholder artwork 24",
+                caption: "Placeholder artwork 24"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+25",
+                alt: "Placeholder artwork 25",
+                caption: "Placeholder artwork 25"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+26",
+                alt: "Placeholder artwork 26",
+                caption: "Placeholder artwork 26"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+27",
+                alt: "Placeholder artwork 27",
+                caption: "Placeholder artwork 27"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+28",
+                alt: "Placeholder artwork 28",
+                caption: "Placeholder artwork 28"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+29",
+                alt: "Placeholder artwork 29",
+                caption: "Placeholder artwork 29"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+30",
+                alt: "Placeholder artwork 30",
+                caption: "Placeholder artwork 30"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+31",
+                alt: "Placeholder artwork 31",
+                caption: "Placeholder artwork 31"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+32",
+                alt: "Placeholder artwork 32",
+                caption: "Placeholder artwork 32"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+33",
+                alt: "Placeholder artwork 33",
+                caption: "Placeholder artwork 33"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+34",
+                alt: "Placeholder artwork 34",
+                caption: "Placeholder artwork 34"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+35",
+                alt: "Placeholder artwork 35",
+                caption: "Placeholder artwork 35"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+36",
+                alt: "Placeholder artwork 36",
+                caption: "Placeholder artwork 36"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+37",
+                alt: "Placeholder artwork 37",
+                caption: "Placeholder artwork 37"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+38",
+                alt: "Placeholder artwork 38",
+                caption: "Placeholder artwork 38"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+39",
+                alt: "Placeholder artwork 39",
+                caption: "Placeholder artwork 39"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+40",
+                alt: "Placeholder artwork 40",
+                caption: "Placeholder artwork 40"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+41",
+                alt: "Placeholder artwork 41",
+                caption: "Placeholder artwork 41"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+42",
+                alt: "Placeholder artwork 42",
+                caption: "Placeholder artwork 42"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+43",
+                alt: "Placeholder artwork 43",
+                caption: "Placeholder artwork 43"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+44",
+                alt: "Placeholder artwork 44",
+                caption: "Placeholder artwork 44"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+45",
+                alt: "Placeholder artwork 45",
+                caption: "Placeholder artwork 45"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+46",
+                alt: "Placeholder artwork 46",
+                caption: "Placeholder artwork 46"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+47",
+                alt: "Placeholder artwork 47",
+                caption: "Placeholder artwork 47"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+48",
+                alt: "Placeholder artwork 48",
+                caption: "Placeholder artwork 48"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+49",
+                alt: "Placeholder artwork 49",
+                caption: "Placeholder artwork 49"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+50",
+                alt: "Placeholder artwork 50",
+                caption: "Placeholder artwork 50"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+51",
+                alt: "Placeholder artwork 51",
+                caption: "Placeholder artwork 51"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+52",
+                alt: "Placeholder artwork 52",
+                caption: "Placeholder artwork 52"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+53",
+                alt: "Placeholder artwork 53",
+                caption: "Placeholder artwork 53"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+54",
+                alt: "Placeholder artwork 54",
+                caption: "Placeholder artwork 54"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+55",
+                alt: "Placeholder artwork 55",
+                caption: "Placeholder artwork 55"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+56",
+                alt: "Placeholder artwork 56",
+                caption: "Placeholder artwork 56"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+57",
+                alt: "Placeholder artwork 57",
+                caption: "Placeholder artwork 57"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+58",
+                alt: "Placeholder artwork 58",
+                caption: "Placeholder artwork 58"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+59",
+                alt: "Placeholder artwork 59",
+                caption: "Placeholder artwork 59"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+60",
+                alt: "Placeholder artwork 60",
+                caption: "Placeholder artwork 60"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+61",
+                alt: "Placeholder artwork 61",
+                caption: "Placeholder artwork 61"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+62",
+                alt: "Placeholder artwork 62",
+                caption: "Placeholder artwork 62"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+63",
+                alt: "Placeholder artwork 63",
+                caption: "Placeholder artwork 63"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+64",
+                alt: "Placeholder artwork 64",
+                caption: "Placeholder artwork 64"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+65",
+                alt: "Placeholder artwork 65",
+                caption: "Placeholder artwork 65"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+66",
+                alt: "Placeholder artwork 66",
+                caption: "Placeholder artwork 66"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+67",
+                alt: "Placeholder artwork 67",
+                caption: "Placeholder artwork 67"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+68",
+                alt: "Placeholder artwork 68",
+                caption: "Placeholder artwork 68"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+69",
+                alt: "Placeholder artwork 69",
+                caption: "Placeholder artwork 69"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+70",
+                alt: "Placeholder artwork 70",
+                caption: "Placeholder artwork 70"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+71",
+                alt: "Placeholder artwork 71",
+                caption: "Placeholder artwork 71"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+72",
+                alt: "Placeholder artwork 72",
+                caption: "Placeholder artwork 72"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+73",
+                alt: "Placeholder artwork 73",
+                caption: "Placeholder artwork 73"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+74",
+                alt: "Placeholder artwork 74",
+                caption: "Placeholder artwork 74"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+75",
+                alt: "Placeholder artwork 75",
+                caption: "Placeholder artwork 75"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+76",
+                alt: "Placeholder artwork 76",
+                caption: "Placeholder artwork 76"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+77",
+                alt: "Placeholder artwork 77",
+                caption: "Placeholder artwork 77"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+78",
+                alt: "Placeholder artwork 78",
+                caption: "Placeholder artwork 78"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+79",
+                alt: "Placeholder artwork 79",
+                caption: "Placeholder artwork 79"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+80",
+                alt: "Placeholder artwork 80",
+                caption: "Placeholder artwork 80"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+81",
+                alt: "Placeholder artwork 81",
+                caption: "Placeholder artwork 81"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+82",
+                alt: "Placeholder artwork 82",
+                caption: "Placeholder artwork 82"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+83",
+                alt: "Placeholder artwork 83",
+                caption: "Placeholder artwork 83"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+84",
+                alt: "Placeholder artwork 84",
+                caption: "Placeholder artwork 84"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+85",
+                alt: "Placeholder artwork 85",
+                caption: "Placeholder artwork 85"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+86",
+                alt: "Placeholder artwork 86",
+                caption: "Placeholder artwork 86"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+87",
+                alt: "Placeholder artwork 87",
+                caption: "Placeholder artwork 87"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+88",
+                alt: "Placeholder artwork 88",
+                caption: "Placeholder artwork 88"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+89",
+                alt: "Placeholder artwork 89",
+                caption: "Placeholder artwork 89"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+90",
+                alt: "Placeholder artwork 90",
+                caption: "Placeholder artwork 90"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+91",
+                alt: "Placeholder artwork 91",
+                caption: "Placeholder artwork 91"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+92",
+                alt: "Placeholder artwork 92",
+                caption: "Placeholder artwork 92"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+93",
+                alt: "Placeholder artwork 93",
+                caption: "Placeholder artwork 93"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+94",
+                alt: "Placeholder artwork 94",
+                caption: "Placeholder artwork 94"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+95",
+                alt: "Placeholder artwork 95",
+                caption: "Placeholder artwork 95"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+96",
+                alt: "Placeholder artwork 96",
+                caption: "Placeholder artwork 96"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+97",
+                alt: "Placeholder artwork 97",
+                caption: "Placeholder artwork 97"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+98",
+                alt: "Placeholder artwork 98",
+                caption: "Placeholder artwork 98"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+99",
+                alt: "Placeholder artwork 99",
+                caption: "Placeholder artwork 99"
+            },
+            {
+                src: "https://via.placeholder.com/800x600?text=Artwork+100",
+                alt: "Placeholder artwork 100",
+                caption: "Placeholder artwork 100"
             }
-            // You can add up to 100+ images here by appending more objects
         ];
 
         var galleryGrid = document.getElementById('galleryGrid');
