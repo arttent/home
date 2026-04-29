@@ -38,16 +38,31 @@
     }
     </script>
 
-    <!-- Google Fonts: Bebas Neue for headings, Inter for body -->
+    <!-- Resource hints -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdn.breba.app" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Copy%20of%203.jpg">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Non-blocking fonts -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Non-blocking Bootstrap Icons -->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    </noscript>
 
     <!-- Google Analytics (placeholder) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -413,6 +428,18 @@
             text-transform: uppercase;
             font-weight: 600;
             color: #fef3c7;
+        }
+
+        .font-reveal-bebas,
+        .font-reveal-inter,
+        .font-reveal-icons {
+            visibility: hidden;
+        }
+
+        html.fonts-bebas-ready .font-reveal-bebas,
+        html.fonts-inter-ready .font-reveal-inter,
+        html.fonts-icons-ready .font-reveal-icons {
+            visibility: visible;
         }
 
         .hero-badge-dot {
@@ -1035,41 +1062,41 @@
         <div class="hero-content">
             <div class="hero-inner">
                 <div class="hero-main hero-main-centered">
-                    <div class="hero-badge">
+                    <div class="hero-badge font-reveal-inter">
                         <span class="hero-badge-dot"></span>
                         Georgian Art Management Company Since 2019
                     </div>
-                    <h1 class="hero-heading">Turn Georgian Art Into a Living Collection</h1>
-                    <p class="hero-subtitle">
+                    <h1 class="hero-heading font-reveal-bebas">Turn Georgian Art Into a Living Collection</h1>
+                    <p class="hero-subtitle font-reveal-inter">
                         Arttent is an international art initiatives and development organization dedicated to advancing the careers of visionary artists and enriching the global cultural landscape. Our mission is to act as the essential bridge, facilitating strategic partnerships, promoting innovative artistic projects, and building robust, reciprocal relationships between galleries, institutions, and the international collector base since 2019.
                     </p>
-                    <p class="hero-secondary">
+                    <p class="hero-secondary font-reveal-inter">
                         Based in Tbilisi &mdash; working across Georgia and beyond.
                     </p>
                 </div>
                 <aside class="hero-side-card" aria-label="Snapshot of what ARTTENT does">
-                    <p class="hero-side-heading">What we help you do</p>
+                    <p class="hero-side-heading font-reveal-inter">What we help you do</p>
                     <ul class="hero-side-list">
                         <li>
                             <span class="hero-side-check">
-                                <i class="bi bi-check-lg" aria-hidden="true"></i>
+                                <i class="bi bi-check-lg font-reveal-icons" aria-hidden="true"></i>
                             </span>
-                            <span>Curate meaningful collections of Georgian contemporary art.</span>
+                            <span class="font-reveal-inter">Curate meaningful collections of Georgian contemporary art.</span>
                         </li>
                         <li>
                             <span class="hero-side-check">
-                                <i class="bi bi-check-lg" aria-hidden="true"></i>
+                                <i class="bi bi-check-lg font-reveal-icons" aria-hidden="true"></i>
                             </span>
-                            <span>Transform venues and public spaces into cultural destinations.</span>
+                            <span class="font-reveal-inter">Transform venues and public spaces into cultural destinations.</span>
                         </li>
                         <li>
                             <span class="hero-side-check">
-                                <i class="bi bi-check-lg" aria-hidden="true"></i>
+                                <i class="bi bi-check-lg font-reveal-icons" aria-hidden="true"></i>
                             </span>
-                            <span>Support artists with management, visibility and sustainable careers.</span>
+                            <span class="font-reveal-inter">Support artists with management, visibility and sustainable careers.</span>
                         </li>
                     </ul>
-                    <p class="hero-side-meta mb-0">
+                    <p class="hero-side-meta mb-0 font-reveal-inter">
                         From first-time buyers to institutions, ARTTENT guides every step: concept, curation, acquisition and installation.
                     </p>
                 </aside>
@@ -1125,7 +1152,7 @@
                 <div class="col-12 col-md-4 d-flex">
                     <article class="card-arttent artist-card-corner d-flex flex-column h-100 flex-fill w-100">
                         <img
-                            src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/maka%20zadelashvili1.jpg"
+                            src="https://cdn.breba.app/68d416f8d502012f1b75ec72/acffaf48e69b4ed78bac97ce8f9421f8/assets/maka%20zadelashvili1.webp"
                             class="artist-card-image"
                             alt="Painting by Maka Zedelashvili"
                             loading="lazy"
@@ -1138,7 +1165,7 @@
                 <div class="col-12 col-md-4 d-flex">
                     <article class="card-arttent artist-card-corner d-flex flex-column h-100 flex-fill w-100">
                         <img
-                            src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Maka%20J1.jpg"
+                            src="https://cdn.breba.app/68d416f8d502012f1b75ec72/acffaf48e69b4ed78bac97ce8f9421f8/assets/Maka%20J1.webp"
                             class="artist-card-image"
                             alt="Artwork by Maka Jishkariani"
                             loading="lazy"
@@ -1151,7 +1178,7 @@
                 <div class="col-12 col-md-4 d-flex">
                     <article class="card-arttent artist-card-corner d-flex flex-column h-100 flex-fill w-100">
                         <img
-                            src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/tamar%20gedevanishvili1.jpg"
+                            src="https://cdn.breba.app/68d416f8d502012f1b75ec72/acffaf48e69b4ed78bac97ce8f9421f8/assets/tamar%20gedevanishvili1.webp"
                             class="artist-card-image"
                             alt="Painting by Tamar Gedevanishvili"
                             loading="lazy"
@@ -1167,7 +1194,7 @@
                 <div class="col-12 col-md-6 d-flex">
                     <article class="card-arttent artist-card-corner d-flex flex-column h-100 flex-fill w-100">
                         <img
-                            src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Laka%20Popkhadze.jpg"
+                            src="https://cdn.breba.app/68d416f8d502012f1b75ec72/acffaf48e69b4ed78bac97ce8f9421f8/assets/Laka%20Popkhadze.webp"
                             class="artist-card-image"
                             alt="Painting by Laka Popkhadze"
                             loading="lazy"
@@ -1180,7 +1207,7 @@
                 <div class="col-12 col-md-6 d-flex">
                     <article class="card-arttent artist-card-corner d-flex flex-column h-100 flex-fill w-100">
                         <img
-                            src="https://cdn.breba.app/maya/acffaf48e69b4ed78bac97ce8f9421f8/assets/Elene%20Rakviashvili.jpg"
+                            src="https://cdn.breba.app/68d416f8d502012f1b75ec72/acffaf48e69b4ed78bac97ce8f9421f8/assets/Elene%20Rakviashvili.webp"
                             class="artist-card-image"
                             alt="Painting by Elene Rakviashvili"
                             loading="lazy"
@@ -1438,7 +1465,27 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-    // Build gallery images dynamically so it can scale to many items
+    // Reveal hero text and icons as each font becomes available
+    (function () {
+        if (!('fonts' in document) || !document.fonts || typeof document.fonts.load !== 'function') {
+            document.documentElement.classList.add('fonts-bebas-ready', 'fonts-inter-ready', 'fonts-icons-ready');
+            return;
+        }
+
+        document.fonts.load('700 1em "Bebas Neue"').then(function () {
+            document.documentElement.classList.add('fonts-bebas-ready');
+        });
+
+        document.fonts.load('400 1em Inter').then(function () {
+            document.documentElement.classList.add('fonts-inter-ready');
+        });
+
+        document.fonts.load('400 1em "bootstrap-icons"').then(function () {
+            document.documentElement.classList.add('fonts-icons-ready');
+        });
+    })();
+
+    // Build gallery images only after the full page has loaded
     (function () {
         var galleryImages = [
             {
@@ -1507,44 +1554,53 @@
             }
         ];
 
-        var galleryGrid = document.getElementById('galleryGrid');
-        if (!galleryGrid || !galleryImages || !galleryImages.length) return;
+        function buildGallery() {
+            var galleryGrid = document.getElementById('galleryGrid');
+            if (!galleryGrid || !galleryImages || !galleryImages.length || galleryGrid.childElementCount) return;
 
-        var fragment = document.createDocumentFragment();
+            var fragment = document.createDocumentFragment();
 
-        galleryImages.forEach(function (item) {
-            if (!item || !item.src) return;
+            galleryImages.forEach(function (item) {
+                if (!item || !item.src) return;
 
-            var col = document.createElement('div');
-            col.className = 'col-6 col-md-4 col-lg-3';
+                var col = document.createElement('div');
+                col.className = 'col-6 col-md-4 col-lg-3';
 
-            var figure = document.createElement('figure');
-            figure.className = 'gallery-item';
+                var figure = document.createElement('figure');
+                figure.className = 'gallery-item';
 
-            var wrapper = document.createElement('div');
-            wrapper.className = 'gallery-image-wrapper';
+                var wrapper = document.createElement('div');
+                wrapper.className = 'gallery-image-wrapper';
 
-            var img = document.createElement('img');
-            img.className = 'gallery-image';
-            img.src = item.src;
-            img.alt = item.alt || '';
-            img.loading = 'lazy';
+                var img = document.createElement('img');
+                img.className = 'gallery-image';
+                img.src = item.src;
+                img.alt = item.alt || '';
+                img.loading = 'lazy';
+                img.decoding = 'async';
 
-            wrapper.appendChild(img);
-            figure.appendChild(wrapper);
+                wrapper.appendChild(img);
+                figure.appendChild(wrapper);
 
-            if (item.caption) {
-                var figcaption = document.createElement('figcaption');
-                figcaption.className = 'gallery-caption';
-                figcaption.textContent = item.caption;
-                figure.appendChild(figcaption);
-            }
+                if (item.caption) {
+                    var figcaption = document.createElement('figcaption');
+                    figcaption.className = 'gallery-caption';
+                    figcaption.textContent = item.caption;
+                    figure.appendChild(figcaption);
+                }
 
-            col.appendChild(figure);
-            fragment.appendChild(col);
-        });
+                col.appendChild(figure);
+                fragment.appendChild(col);
+            });
 
-        galleryGrid.appendChild(fragment);
+            galleryGrid.appendChild(fragment);
+        }
+
+        if (document.readyState === 'complete') {
+            buildGallery();
+        } else {
+            window.addEventListener('load', buildGallery, { once: true });
+        }
     })();
 
     // Set current year in footer
